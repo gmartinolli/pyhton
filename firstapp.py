@@ -11,3 +11,12 @@ if genre == 'Comedy':
      st.write('You selected comedy.')
 else:
      st.write("You didn't select comedy.")
+
+     import json, requests 
+     APIkey = e8d8bf91c4a17c3cd68e16fc49886d0b
+location = 'london'
+url = 'http://api.openweathermap.org/data/2.5/weather?q=' + location + '&appid=' + APIkey
+response = requests.get(url)
+import streamlit as st
+title = st.text_input('Input city name', 'city name')
+st.write('The weather of', title)
