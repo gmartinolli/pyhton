@@ -20,6 +20,7 @@ st.write('The weather of', location)
 url = 'http://api.openweathermap.org/data/2.5/weather?q=' + location + '&appid=' + APIkey
 response = requests.get(url)
 weatherData = json.loads(response.text)
+st.write(weatherData)
 
 
 
