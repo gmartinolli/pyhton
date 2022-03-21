@@ -21,6 +21,6 @@ url = 'http://api.openweathermap.org/data/2.5/weather?q=' + location + '&appid='
 response = requests.get(url)
 weatherData = json.loads(response.text)
 st.write(weatherData['main']['temp_max'])
-
+st.write(weatherData['main']['temp_min'])
 
 
