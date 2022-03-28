@@ -8,7 +8,7 @@ st.text_input("choose a word")
 keyword = st.radio("now choose what you are most interested in",('sounds like', 'looks like', 'is opposite to', 'is similar to'))
 st.write('your word')
 if keyword == 'sounds like':
-     st.write('Your word sounds like'dataFromDatamuse1,)
+     st.write('Your word sounds like',dataFromDatamuse1)
 if keyword == 'looks like':
      st.write('Your word looks like')
 if keyword == 'is opposite to':
