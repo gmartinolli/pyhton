@@ -12,10 +12,10 @@ dataFromDatamuse1 = json.loads(response1.text)
 url2= 'https://api.datamuse.com/words?ml=' + keyword + '&max=10'
 response2 = requests.get(url2)  
 dataFromDatamuse2 = json.loads(response2.text)
-url3= 'https://api.datamuse.com/words?ant=' + keyword + '&max=10'
+url3= 'https://api.datamuse.com/words?rel_[ant]' + keyword + '&max=10'
 response3 = requests.get(url3)  
 dataFromDatamuse3 = json.loads(response3.text)
-url4= 'https://api.datamuse.com/words?syn=' + keyword + '&max=10'
+url4= 'https://api.datamuse.com/words?rel_[syn]' + keyword + '&max=10'
 response4 = requests.get(url4)  
 dataFromDatamuse4 = json.loads(response4.text)
 if search == 'sounds like':
