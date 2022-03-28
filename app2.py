@@ -3,9 +3,9 @@ st.header("Word search")
 st.text("please select one")  
 import json,requests
 from pprint import pprint
-st.text_input("choose a word")
+keyword= st.text_input("choose a word")
 
-keyword = st.selectbox("now choose what you are most interested in",('sounds like', 'looks like', 'is opposite to', 'is similar to'))
+search = st.selectbox("now choose what you are most interested in",('sounds like', 'looks like', 'is opposite to', 'is similar to'))
 st.write('your word')
 url1= 'https://api.datamuse.com/words?sl=' + keyword + '&max=10'
 response1 = requests.get(url1)  
