@@ -10,15 +10,19 @@ st.write('your word')
 url1= 'https://api.datamuse.com/words?sl=' + keyword + '&max=10'
 response1 = requests.get(url1)  
 dataFromDatamuse1 = json.loads(response1.text)
+pprint(dataFromDatamuse1)
 url2= 'https://api.datamuse.com/words?ml=' + keyword + '&max=10'
 response2 = requests.get(url2)  
 dataFromDatamuse2 = json.loads(response2.text)
+pprint(dataFromDatamuse2)
 url3= 'https://api.datamuse.com/words?ant=' + keyword + '&max=10'
 response3 = requests.get(url3)  
 dataFromDatamuse3 = json.loads(response3.text)
+pprint(dataFromDatamuse3)
 url4= 'https://api.datamuse.com/words?syn=' + keyword + '&max=10'
 response4 = requests.get(url4)  
 dataFromDatamuse4 = json.loads(response4.text)
+pprint(dataFromDatamuse4)
 if keyword == 'sounds like':
      st.write('Your word sounds like',dataFromDatamuse1)
 if keyword == 'looks like':
