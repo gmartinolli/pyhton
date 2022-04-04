@@ -2,7 +2,7 @@ import streamlit as st
 from googletrans import Translator
 translator = Translator()
 st.header("Google translator")  
-keyword1 = st.text_input("translate")  
+keyword1 = st.text_input("translate", value="word")  
 keyword2 = st.text_input("into which language?", value="en")
 word= keyword1 
 abc = translator.translate(word,dest= keyword2)
