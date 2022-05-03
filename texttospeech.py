@@ -13,6 +13,6 @@ st.write(transTodest.text)
 
 tts1=gTTS(transTodest.text,lang)
 tts1.save('audio.mp3')
-st.audio(tts1, format=mp3,start_time=0)
+st.audio(tts1, format="audio/wav",start_time=0)
 
 
