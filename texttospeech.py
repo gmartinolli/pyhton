@@ -9,10 +9,10 @@ lang = st.text_input("choose a language", 'en')
 detectedLanguage = translator.detect(text)
 st.write(detectedLanguage.lang)
 transTodest = translator.translate(text=text, src=detectedLanguage.lang, dest=lang)
-print(transTodest.text)
+st.write(transTodest.text)
 
-#tts1=gTTS(transTodest.text,lang)
-#tts1.save('audio.mp3')
-#st.audio(audio.mp3)
-#my_function('audio.mp3')
+tts1=gTTS(transTodest.text,lang)
+tts1.save('audio.mp3')
+st.audio(tts1, format=mp3,start_time=0)
+
 
